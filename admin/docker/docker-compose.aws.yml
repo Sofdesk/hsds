@@ -83,3 +83,14 @@ services:
       - ${PWD}/admin/config/:/config/
     links:
       - head
+
+  nginx:
+    container_name: nginx
+    restart: always
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - head
+      - dn
+      - sn
