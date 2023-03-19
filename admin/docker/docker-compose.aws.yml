@@ -84,13 +84,13 @@ services:
     links:
       - head
 
-  nginx:
-    container_name: nginx
-    restart: always
-    build: ./nginx
-    ports:
-      - "80:80"
-    depends_on:
-      - head
-      - dn
-      - sn
+#  nginx_custom:
+#    container_name: nginx
+#    restart: always
+#    build: ./nginx
+#    ports:
+#      - "80:80"
+#    depends_on:
+#      - head
+#      - dn
+#      - sn
